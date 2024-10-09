@@ -1,6 +1,6 @@
 <small>Copyright Brandibur Tudor 2023-2024</small>
 
-#Photo gallery website
+# Photo gallery website
 
 ### 1. Tools used
 * HTML + CSS (for the base template and basic design)
