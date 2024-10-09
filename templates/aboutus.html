@@ -1,0 +1,29 @@
+<!--Copyright Tudor Brandibur, 2023-2024-->
+{% extends '_base.html' %}
+
+{% block buttons %}
+<div class="navbar">
+	<a class="nav-item nav-link" href="/">Home</a>
+	<a class="nav-item nav-link" href="/gallery">Gallery</a>
+  <a class="nav-item nav-link" href="/upload">Upload</a>
+	<a class="nav-item nav-link active" href="/aboutus">About us</a>
+	<a class="nav-item nav-link" href="/vreaumarire">Vreau Marire :)</a>
+	{% if not authenticated %}
+	<a class="nav-item nav-link" href="/login">Login</a>
+	{% else %}
+	<a class="nav-item nav-link" href="/logout">Logout</a>
+	{%endif%}
+</div>
+{% endblock buttons %}
+
+{% block content%}
+<br>
+<h1>Welcome to MEMORY DEN!</h1>
+<p>At MEMORY DEN, our mission is to provide a simple and secure platform for you to upload, store, and cherish your personal photos. Whether you’re preserving cherished memories, showcasing your creative work, or simply organizing your photo collection, we’re here to help.</p>
+<p>We believe that every photo tells a story, and our goal is to make it easy for you to keep those stories safe and accessible. With user-friendly features and robust security, you can confidently upload and manage your images while enjoying a seamless experience.</p>
+<p>Thank you for choosing My Photo Gallery. If you have any questions or need assistance, don’t hesitate to reach out. We’re here to support you in preserving your precious moments!
+
+</p>
+
+{% endblock content %}
+

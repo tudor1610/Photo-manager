@@ -1,0 +1,31 @@
+<!--Copyright Tudor Brandibur, 2023-2024-->
+{% extends '_base.html' %}
+
+{% block buttons %}
+<div class="navbar">
+	<a class="nav-item nav-link active" href="/">Home</a>
+	<a class="nav-item nav-link" href="/gallery">Gallery</a>
+	<a class="nav-item nav-link" href="/upload">Upload</a>
+	<a class="nav-item nav-link" href="/aboutus">About us</a>
+	<a class="nav-item nav-link" href="/vreaumarire">Vreau Marire :)</a>
+	{% if not authenticated %}
+	<a class="nav-item nav-link" href="/login">Login</a>
+	{% else %}
+	<a class="nav-item nav-link" href="/logout">Logout</a>
+	{%endif%}
+</div>
+{% endblock buttons %}
+
+
+{% block content %}
+<br>
+<br>
+<h1 class="main-title">Welcome to the MEMORY DEN!</h1>
+<p class="text-center">
+	This is your personal photo gallery,<br>
+	an easy-to-use photo manager designed<br>specifically for your needs.
+</p>
+<br>
+<br>
+<h1 class="text-center">Enjoy! :)</h1>
+{% endblock content %}

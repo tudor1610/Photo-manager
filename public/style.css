@@ -1,0 +1,150 @@
+body {
+  background-image: url(../public/images/munte.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  font-size: large;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Brush Script MT', cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FFD700;
+}
+
+header {
+  display: block;
+  background-blend-mode:color;
+  font-family: 'Brush Script MT', cursive;
+  height: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.thumbnail {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gallery-item {
+  margin: 10px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+.login-text {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.login-button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: #FFD700;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background-color: #ffe032;
+}
+
+.container {
+  text-align: center;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #000000;
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 50px;
+}
+
+.navbar a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 50px;
+  margin: 15px;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #FFD700;
+  color: rgb(0, 0, 0);
+}
+
+.main {
+  flex: 1;
+  padding: 16px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  max-width: 900px;
+  padding-bottom: 90px;
+  font-size: x-large;
+  text-align: justify;
+}
+
+.content-box {
+  background: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  max-height: fit-content;
+  flex: 1;
+  overflow: auto;
+  height: 100%;
+}
+
+.content-box.main-content{
+  min-height: 100%;
+}
+
+h1.main-title {
+  color: #FFD700;
+  padding-bottom: 0.4em;
+  margin-top: 1rem;
+  margin-bottom: 0.7em;
+}
+
+

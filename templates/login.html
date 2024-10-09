@@ -1,0 +1,37 @@
+<!--Copyright Tudor Brandibur, 2023-2024-->
+{% extends "_base.html" %}
+
+{% block buttons %}
+<div class="navbar">
+	<a class="nav-item nav-link" href="/">Home</a>
+	<a class="nav-item nav-link" href="/gallery">Gallery</a>
+	<a class="nav-item nav-link" href="/upload">Upload</a>
+	<a class="nav-item nav-link" href="/aboutus">About us</a>
+  <a class="nav-item nav-link" href="/vreaumarire">Vreau Marire :)</a>
+	{% if not authenticated %}
+	<a class="nav-item nav-link active" href="/login">Login</a>
+	{% else %}
+	<a class="nav-item nav-link" href="/logout">Logout</a>
+	{%endif%}
+</div>
+{% endblock buttons %}
+
+{% block content %}
+<h1 class="main-title" style="display: block;">Login</h1>
+
+<form method="post" class="login-form">
+  {% if error_msg %}
+  <div style="color: red;">{{ error_msg }}</div>
+  {% endif %}
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" name="username" id="username">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" id="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+{% endblock %}
+

@@ -1,0 +1,23 @@
+{% extends '_base.html' %}
+
+{% block buttons %}
+<div class="navbar">
+	<a class="nav-item nav-link" href="/">Home</a>
+	<a class="nav-item nav-link" href="/gallery">Gallery</a>
+	<a class="nav-item nav-link" href="/upload">Upload</a>
+	<a class="nav-item nav-link" href="/aboutus">About us</a>
+	<a class="nav-item nav-link active" href="/vreaumarire">Vreau Marire :)</a>
+	{% if not authenticated %}
+	<a class="nav-item nav-link" href="/login">Login</a>
+	{% else %}
+	<a class="nav-item nav-link" href="/logout">Logout</a>
+	{%endif%}
+</div>
+{% endblock buttons %}
+
+
+{% block content%}
+<br>
+<br>
+<h1>Unu, doi, trei...</h1>
+{% endblock content%}

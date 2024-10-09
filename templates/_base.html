@@ -1,0 +1,48 @@
+<!--Copyright Tudor Brandibur, 2023-2024-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="./public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./public/style.css">
+
+  <title>Tema_IA1</title>
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-content">
+
+			<h1><font size="+10"><strong>MEMORY DEN</strong></font></h1>
+
+			{% if not authenticated %}
+					<div class="login-section">
+						<span class="login-text">Click <a href="/login" style="color:#ffea00";>here</a> to login.</span>
+					</div>
+			{% else %}
+					<h2>Hi, {{username}}!</h2>
+			{% endif %}
+
+		</div>
+	</header>
+
+	{% block buttons%}
+  	{% endblock buttons%}
+
+	<main class="container">
+		<div class="row justify-content-center">
+			<div>
+				<div>
+					<br>
+
+					{% block content%}
+					{% endblock content%}
+
+				</div>
+		  	</div>
+		</div>
+	</main>
+
+</body>
+</html>

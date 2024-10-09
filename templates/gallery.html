@@ -1,0 +1,90 @@
+<!--Copyright Tudor Brandibur, 2023-2024-->
+{% extends '_base.html' %}
+
+{% block buttons %}
+<div class="navbar">
+	<a class="nav-item nav-link" href="/">Home</a>
+	<a class="nav-item nav-link active" href="/gallery">Gallery</a>
+	<a class="nav-item nav-link" href="/upload">Upload</a>
+	<a class="nav-item nav-link" href="/aboutus">About us</a>
+	<a class="nav-item nav-link" href="/vreaumarire">Vreau Marire :)</a>
+	{% if not authenticated %}
+	<a class="nav-item nav-link" href="/login">Login</a>
+	{% else %}
+	<a class="nav-item nav-link" href="/logout">Logout</a>
+	{%endif%}
+</div>
+{% endblock buttons %}
+
+{% block content%}
+
+<main>
+<div class="container">
+	<h1 class="main-title">Gallery</h1>
+	<br>
+	<h2>Animals</h2>
+	<div class="row">
+		<div class="gallery-container">
+			{% for image in animal %}
+			<div class="gallery-item">
+				<a href="{{ url_for('uploaded_file', filename=image) }}" target="_blank">
+					<img src="{{ url_for('uploaded_file', filename=image) }}" class="img-fluid thumbnail" alt="Image">
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<h2>People</h2>
+	<div class="row">
+		<div class="gallery-container">
+			{% for image in people %}
+			<div class="gallery-item">
+				<a href="{{ url_for('uploaded_file', filename=image) }}" target="_blank">
+					<img src="{{ url_for('uploaded_file', filename=image) }}" class="img-fluid thumbnail" alt="Image">
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<h2>Nature</h2>
+	<div class="row">
+		<div class="gallery-container">
+			{% for image in travel %}
+			<div class="gallery-item">
+				<a href="{{ url_for('uploaded_file', filename=image) }}" target="_blank">
+					<img src="{{ url_for('uploaded_file', filename=image) }}" class="img-fluid thumbnail" alt="Image">
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<h2>Travel</h2>
+	<div class="row">
+		<div class="gallery-container">
+			{% for image in nature %}
+			<div class="gallery-item">
+				<a href="{{ url_for('uploaded_file', filename=image) }}" target="_blank">
+					<img src="{{ url_for('uploaded_file', filename=image) }}" class="img-fluid thumbnail" alt="Image">
+				</a>
+			</div>
+			{% endfor %}
+		</div>	
+	</div>
+
+</div>
+<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+</main>
+{% endblock content %}
